@@ -1,36 +1,46 @@
 .at-menu-item {
-  position:    relative;
-  width:       $at-menu-width;
-  border-left: $at-menu-item-border-left-width solid $at-menu-item-active-background;
-  transition:  $transition-time;
+  position:       relative;
+  text-transform: uppercase;
+  font-weight:    500;
+  font-size:      .9rem;
+  letter-spacing: 1px;
+  transition:     $transition-time;
 
-  &.--exact-active,
-  &.--has-submenus.--active {
-    color:             $primary;
-    background-color:  $at-menu-item-active-background;
-    border-left-color: $primary;
-    width:             $at-menu-width - $at-menu-item-border-left-width;
-  }
+  &.--has-submenus {
+    &::before {
+      position:   absolute;
+      top:        50%;
+      transform:  translateY(-50%);
+      right:      -14px;
+      content:    '';
+      visibility: collapse;
+      opacity:    0;
+      border:     7px solid transparent;
+      transition: $transition-time;
+    }
 
-  &:hover > &-link {
-    transform: translateX(5px)
+    &:hover::before {
+      visibility: visible;
+      opacity:    1;
+    }
   }
 
   &-link {
     display:         flex;
     align-items:     center;
-    color:           darken($primary, 20%);
     padding:         15px;
-    width:           $at-menu-width - $at-menu-item-border-left-width;
-    overflow:        hidden;
     text-decoration: none;
+    text-overflow:   ellipsis;
+    white-space:     nowrap;
+    overflow:        hidden;
     transition:      $transition-time;
+    outline:         none;
 
     > .at-icon {
       display:      block;
-      width:        24px;
-      height:       24px;
-      margin-right: 15px;
+      width:        $at-menu-item-link-icon-width;
+      height:       $at-menu-item-link-icon-width;
+      margin-right: $at-menu-item-link-icon-right-margin;
       font-size:    1.5rem;
     }
   }
@@ -40,3 +50,5 @@
     opacity:    1;
   }
 }
+
+@import 'menu-item/theme'

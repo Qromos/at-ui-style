@@ -1,6 +1,8 @@
 .at-menu {
+  padding: 25px 0;
   background: $at-menu-background;
   width:      $at-menu-width;
+  z-index:    999;
 
   &.--vertical {
     //
@@ -12,8 +14,8 @@
 
   &.--fill {
     position: fixed;
-    top:    0;
-    left:   0;
+    top:      0;
+    left:     0;
   }
 
   &.--fill.--vertical {

@@ -5,28 +5,13 @@
   transition: $transition-time;
 
   &.--submenu {
-    position:      absolute;
-    top:           0;
-    right:         -$at-menu-width - $at-menu-item-submenu-left-margin;
-    visibility:    hidden;
-    opacity:       0;
-    border-radius: 4px;
-    box-shadow:    0 1px 6px rgba($black, .15);
-
-    .at-menu-item {
-      border-left: none;
-
-      &-link {
-        color: #444;
-      }
-
-      &.--exact-active {
-        background:  none;
-
-        .at-menu-item-link {
-          color: $primary;
-        }
-      }
-    }
+    position:         absolute;
+    top:              0;
+    right:            -$at-menu-width - 27px;
+    visibility:       hidden;
+    opacity:          0;
+    background-color: $at-menu-background;
+    border-radius:    4px;
+    box-shadow:       0 1px 6px rgba($black, .15);
   }
 }

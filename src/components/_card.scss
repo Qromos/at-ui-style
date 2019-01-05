@@ -1,0 +1,67 @@
+.at-card {
+ /*  position:         relative;
+  border-radius:    $card-border-radius;
+  background-color: $card-bg-color;
+  transition:       .3s;
+  margin-bottom:    $global-space; */
+  background-color: $white;
+  // border-radius: 4px;
+  box-shadow: 0 0 10px rgba($black, .1);
+  border-radius: 4px;
+
+  &:not(.--no-hover):hover {
+    // border-color: $card-border-color-hover;
+    //box-shadow: 1px 0 16px 0 $shadow-color;
+  }
+
+  /* element */
+  &-header {
+    padding: 15px;
+
+    &-title {
+      display: inline-block;
+    }
+
+    &-icon {
+      margin-right: .75rem;
+    }
+  }
+
+  &-extra {
+    float: right;
+  }
+
+  &-body {
+    padding: 15px;
+
+    &.--loading {
+      span {
+        display:         inline-block;
+        margin:          5px 1%;
+        height:          14px;
+        border-radius:   2px;
+        background:      linear-gradient(90deg, rgba(192, 198, 206, .3), rgba(192, 198, 206, .5), rgba(192, 198, 206, .3));
+        background-size: 600% 600%;
+        animation:       card-loading 1.4s ease infinite;
+      }
+    }
+  }
+
+  &-footer {
+    //;
+  }
+
+  &.--bordered {
+    // border: 1px solid $global-border-color;
+  }
+}
+
+@keyframes card-loading {
+  0%,
+  to {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

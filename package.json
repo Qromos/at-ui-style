@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "feathericon": "^1.0.2"
+    "bootstrap": "^4.2.1"
   }
 }

@@ -1,0 +1,34 @@
+.at-form {
+  width: 100%;
+
+  &-control {
+    color:         $black;
+    width:         100%;
+    padding:       10px 0;
+    font-family:   inherit;
+    font-size:     inherit;
+    box-sizing:    border-box;
+    background:    $white;
+    outline:       none;
+    border:        none;
+    border-bottom: 2px solid #f9f9f9;
+    transition:    $transition-time;
+
+    &:focus {
+      border-color: $primary;
+    }
+
+    &.--no-padding {
+      padding: 0;
+    }
+
+    &::placeholder {
+      color: #000;
+      opacity: .4;
+    }
+
+    &-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+}
