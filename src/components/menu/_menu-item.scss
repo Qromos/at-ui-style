@@ -36,7 +36,7 @@
     transition:      $transition-time;
     outline:         none;
 
-    > .at-icon {
+    &-icon {
       display:      block;
       width:        $at-menu-item-link-icon-width;
       height:       $at-menu-item-link-icon-width;

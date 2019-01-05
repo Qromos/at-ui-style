@@ -11,7 +11,7 @@
     background:    $white;
     outline:       none;
     border:        none;
-    border-bottom: 2px solid #f9f9f9;
+    border-bottom: 2px solid $global-border-color;
     transition:    $transition-time;
 
     &:focus {
@@ -26,9 +26,9 @@
       color: #000;
       opacity: .4;
     }
+  }
 
-    &-wrapper {
-      margin-bottom: 1rem;
-    }
+  &-group {
+    margin-bottom: 1rem;
   }
 }

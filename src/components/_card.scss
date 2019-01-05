@@ -6,8 +6,8 @@
   margin-bottom:    $global-space; */
   background-color: $white;
   // border-radius: 4px;
-  box-shadow: 0 0 10px rgba($black, .1);
-  border-radius: 4px;
+  box-shadow: 5px 5px 30px 0px rgba($black, .2);
+  border-radius: 15px;
 
   &:not(.--no-hover):hover {
     // border-color: $card-border-color-hover;
@@ -16,7 +16,7 @@
 
   /* element */
   &-header {
-    padding: 15px;
+    padding: 25px;
 
     &-title {
       display: inline-block;
@@ -32,7 +32,7 @@
   }
 
   &-body {
-    padding: 15px;
+    padding: 0 25px 25px 25px;
 
     &.--loading {
       span {
