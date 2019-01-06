@@ -1,0 +1,29 @@
+.at-checkbox {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    color: $white;
+
+    &__wrapper {
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      border-radius:   4px;
+      margin-right:    .5rem;
+      width:           20px;
+      height:          20px;
+      border:          1px solid $global-border-color;
+      transition:      $transition-time;
+    }
+  }
+
+  &.--checked &__icon__wrapper {
+    background: $primary;
+    border:     1px solid $primary;
+  }
+
+  &__input {
+    display: none;
+  }
+}
