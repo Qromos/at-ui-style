@@ -23,6 +23,10 @@
     border:     1px solid $primary;
   }
 
+  &[disabled] {
+    opacity: .6;
+  }
+
   &__input {
     display: none;
   }
